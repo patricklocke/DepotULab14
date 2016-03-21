@@ -1,6 +1,10 @@
 <h1>Read all about them here!</h1>
-<ul>
-         <!--<li ng-repeat=“ in ”>
-            Message: {{tweet.text}}, UserName: {{tweet.userName}}
-         </li>-->
-</ul>
+    
+    <ul class="list-group">
+        <li class="row list-group-item" ng-repeat="post in posts">
+            <a class="col-sm-3" ng-href="#">{{post.author}}</a> 
+            <a class="col-sm-3" ng-href="#">{{post.title}}</a>
+            <a class="col-sm-3" ng-href="#">{{post.createdAt | date:'medium'}}</a>
+            <button class="col-sm-3" ng-click="">Read More!</button>
+        </li>
+    </ul>
