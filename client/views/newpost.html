@@ -1,0 +1,15 @@
+<h1>Insert New Blog Post here!</h1>
+<form> 
+    <fieldset class="form-group">
+        <label for="inputName">Email address</label>
+        <input type="name" class="form-control" id="author" placeholder="Name: First Last" ng-model='name'>
+    </fieldset>
+    <fieldset class="form-group">
+        <label for="title">Title</label>
+        <textarea class="form-control" id="title" rows="1" ng-model='title'></textarea>
+    </fieldset>
+    <fieldset class = "form-group">
+        <label for="blog"></label>
+        <textarea class="form-control" id='blog' rows="10" ng-model='content'></textarea>
+    </fieldset>
+    <button type="submit" class="btn btn-primary" onclick="NewPostController()"
