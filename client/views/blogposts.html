@@ -1,15 +1,20 @@
 <h1>Read all about them here!</h1>
     
     <ul class="list-group">
-        <li class="row list-group-item" ng-repeat="post in posts">
-            <a class="col-sm-3" ng-href="#">{{post.author}}</a> 
-            <a class="col-sm-3" ng-href="#">{{post.title}}</a>
-            <a class="col-sm-3" ng-href="#">{{post.createdAt | date:'medium'}}</a>
-            <button class="col-sm-3" data-toggle="collapse" data-target="#testing"=>Read More!</button>
-                    <div class="collapse" id="testing">
-                        <div class="card card-block">
-                            {{post.content}}
-                        </div>
-                    </div>
+        <li class="row list-group-item" ng-repeat="post in posts | orderBy: '-createdAt'">
+            <a class="col-xs-3">{{post.author}}</a> 
+            <a class="col-xs-3">{{post.title}}</a>
+            <a class="col-xs-3">{{post.createdAt | date:'short'}}</a>
+              <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#contentblock" aria-expanded="false"                 aria-controls="contentblock">
+                READ MORE!
+              </button>
+
+                <div class="collapse" id="contentblock">
+                < class="card card-block">
+                    {{post.content}}
+                </div>
+                </div>
+            <!--<button ng-click="navigateToSingle(post.id)" class="col-xs-1">Read Post</button>-->
+            
         </li>
     </ul>
