@@ -16,6 +16,10 @@ controllers.controller('BlogPostsController', ['$scope','blogFactory','$location
             $location.path('/posts/' + id);
             console.log(id);
         }
+        
+        // $scope.showSing = function(id){
+        //     //individual id here
+        // }
     
 
 }]);
