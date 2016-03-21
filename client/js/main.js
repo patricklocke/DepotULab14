@@ -19,6 +19,10 @@ app.config(['$routeProvider', function($routeProvider){
         controller: 'NewPostController',
         
     })
+    // .when('/detail/:id', {
+    //     templateUrl:'views/detail.html',
+    //     controller:'BlogPostsController'
+    // }
     .otherwise({
         redirectTo: '/'
     })

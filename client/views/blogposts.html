@@ -5,6 +5,11 @@
             <a class="col-sm-3" ng-href="#">{{post.author}}</a> 
             <a class="col-sm-3" ng-href="#">{{post.title}}</a>
             <a class="col-sm-3" ng-href="#">{{post.createdAt | date:'medium'}}</a>
-            <button class="col-sm-3" ng-click="">Read More!</button>
+            <button class="col-sm-3" data-toggle="collapse" data-target="#testing"=>Read More!</button>
+                    <div class="collapse" id="testing">
+                        <div class="card card-block">
+                            {{post.content}}
+                        </div>
+                    </div>
         </li>
     </ul>
